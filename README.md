@@ -28,4 +28,9 @@ $ ./gradlew test
 $ ./gradlew run -Pfile=SOME_XML_FIEL.xml
 ```
 
+# Sample Test Files
+There are two sample XML files located inside `src/test/resources` folder. They represent the format the code 
+understands. Note the XML reading part of this project is **not** tested.
+
+
 
