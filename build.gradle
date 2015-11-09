@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+mainClassName = 'info.binlan.Main'
+
+repositories {
+  mavenCentral()
+}
+
+run{
+  if(project.hasProperty("file")){
+    args file
+  }
+}
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.3'
+}
+
